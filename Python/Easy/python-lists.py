@@ -51,7 +51,7 @@ print"""
 original_stdin = sys.stdin
 
 sys.stdin = StringIO(sample_input)
-idx = 0
+
 if __name__ == '__main__':
     N = int(input())
 
