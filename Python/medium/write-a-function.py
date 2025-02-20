@@ -14,18 +14,17 @@ sys.stdin = StringIO(input_sample)
 
 def is_leap(year):
     leap = False
-    lock_found = False
 
     div_by_4 = year % 4
     div_by_100 = year % 100
     div_by_400 = year % 400
     if div_by_100 == 0 and div_by_400 == 0:
         leap = True
-        lock_found = True
-    if div_by_100 == 0 and not lock_found:
+
+    elif div_by_100 == 0:
         leap = False
-        lock_found = True
-    if div_by_4 == 0 and not lock_found:
+
+    elif div_by_4 == 0:
         leap = True
 
     return leap
